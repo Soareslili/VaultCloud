@@ -67,3 +67,11 @@
   mask-composite: exclude;
 }
 .btn-outline-glow:hover { box-shadow: 0 0 22px rgba(34,211,238,.35) inset, 0 0 18px rgba(59,130,246,.35); transform: translateY(-1px) scale(1.02); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-content {
+  animation: fadeUp 1s ease-out forwards;
+}

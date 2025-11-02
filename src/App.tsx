@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Hero from "./pages/Hero";
+import Navbar from "./components/Layout/Navbar";
+import Hero from "./components/Home/Hero";
+import Footer from "./components/Layout/Footer";
+import ServicesPage from "./pages/ServicesPage";
 
 function App() {
   return (
@@ -11,9 +13,11 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Hero />} />
+            <Route path="services" element={<ServicesPage />} />  
             
           </Routes>
         </main>
+        <Footer/>
       </div>
     </Router>
   );
