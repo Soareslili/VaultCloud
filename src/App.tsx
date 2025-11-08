@@ -4,6 +4,9 @@ import Hero from "./components/Home/Hero";
 import Footer from "./components/Layout/Footer";
 import Services from "./components/Services/ServiceCard";
 import About from "./components/Home/About";
+import Blog from "./pages/Blog";
+import FaleConosco from "./components/Layout/FaleConosco";
+
 
 
 function App() {
@@ -17,6 +20,8 @@ function App() {
             <Route path="/" element={<Hero />} />
             <Route path="services" element={<Services />} />  
             <Route path="about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+             <Route path="/contact" element={<FaleConosco />} />
             
           </Routes>
         </main>

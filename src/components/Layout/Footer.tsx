@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import logo from '../../assets/Logo.png'
@@ -18,6 +18,18 @@ const Footer = () => {
             <p className="text-sm text-gray-300">
               Protegendo o futuro da sua nuvem com soluções de segurança, automação e governança.
             </p>
+
+            <div className="flex gap-4">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-300 hover:text-[#22d3ee] transition-colors">
+              <Instagram className="w-6 h-6" />
+              </a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-300 hover:text-[#22d3ee] transition-colors">
+              <Facebook className="w-6 h-6" />
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-300 hover:text-[#22d3ee] transition-colors">
+              <Linkedin className="w-6 h-6" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -41,7 +53,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/contact" className="hover:text-accent transition-colors">
-                  Contato
+                 Fale Conosco
                 </Link>
               </li>
             </ul>

@@ -8,6 +8,7 @@ import { Search, Menu, X } from "lucide-react";
 import { Input } from "../ui/input";
 import { useState } from "react";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -20,7 +21,8 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Serviços", path: "/services" },
     { name: "Sobre Nós", path: "/about" },
-    { name: "Contato", path: "/contact" },
+    {name: "Blog", path:"/blog"},
+    { name: "Fale Conosco", path: "/contact" },
   ];
 
   const handleSearch = (e: React.FormEvent) => {
