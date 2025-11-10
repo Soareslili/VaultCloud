@@ -6,6 +6,7 @@ import Services from "./components/Services/ServiceCard";
 import About from "./components/Home/About";
 import Blog from "./pages/Blog";
 import FaleConosco from "./components/Layout/FaleConosco";
+import AOSInit from "./components/ui/AOSInit";
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
 
         <main className="flex-grow">
+            <AOSInit />
           <Routes>
             <Route path="/" element={<Hero />} />
             <Route path="services" element={<Services />} />  

@@ -1,9 +1,14 @@
-import Consultoria from '../../assets/consultoria.png'
-
-
-
-
-import { Shield, Lock, Cloud, Cpu, Server, Network, CheckCircle } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import Consultoria from "../../assets/consultoria.png";
+import {
+  Shield,
+  Lock,
+  Cloud,
+  Cpu,
+  Server,
+  Network,
+  CheckCircle,
+} from "lucide-react";
 
 const services = [
   {
@@ -83,7 +88,9 @@ export default function Services() {
             Soluções que protegem o futuro da sua nuvem
           </h1>
           <p className="text-gray-300 text-lg">
-            Estratégias integradas em segurança, automação e governança multicloud — projetadas para empresas que buscam excelência operacional e conformidade global.
+            Estratégias integradas em segurança, automação e governança
+            multicloud — projetadas para empresas que buscam excelência
+            operacional e conformidade global.
           </p>
         </div>
       </section>
@@ -95,7 +102,7 @@ export default function Services() {
             <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
               Nossos Serviços
             </h2>
-            <p className="text-gray-600 mt-3 text-lg max-w-2xl ml-60">
+            <p className="text-gray-600 mt-3 text-lg max-w-2xl mx-auto">
               Soluções completas em segurança, automação e governança multicloud —
               desenvolvidas por especialistas certificados.
             </p>
@@ -108,6 +115,9 @@ export default function Services() {
                 <div
                   key={i}
                   className="group bg-white rounded-xl shadow-md border border-gray-200 p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 200}
+                  data-aos-duration="1200"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400/20 to-blue-500/20 group-hover:from-cyan-400/30 group-hover:to-blue-500/30 transition-all duration-300">
@@ -117,7 +127,9 @@ export default function Services() {
                       {s.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {s.desc}
+                  </p>
                 </div>
               );
             })}
@@ -134,29 +146,8 @@ export default function Services() {
         </div>
       </section>
 
-      {/* BENEFÍCIOS */}
-      <section className="py-20 bg-[#001B3A] text-white text-center">
-        <div className="max-w-6xl mx-auto space-y-10 px-6">
-          <h2 className="text-3xl font-bold text-cyan-300">
-            Por que empresas escolhem a VaultCloud?
-          </h2>
-          <div className="grid md:grid-cols-4 gap-10">
-            {[
-              { number: "99.9%", label: "de disponibilidade garantida" },
-              { number: "+50", label: "empresas atendidas com sucesso" },
-              { number: "24/7", label: "monitoramento e resposta contínua" },
-              { number: "ISO 27001", label: "padrões globais de segurança" },
-            ].map((b, i) => (
-              <div key={i}>
-                <h3 className="text-cyan-400 text-2xl font-bold mb-2">
-                  {b.number}
-                </h3>
-                <p className="text-gray-300">{b.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* BENEFÍCIOS COM CONTAGEM */}
+      <BenefitsSection />
 
       {/* PROCESSO */}
       <section className="py-24 bg-[#F5F7FB] px-6 text-center">
@@ -165,13 +156,37 @@ export default function Services() {
         </h2>
         <div className="max-w-5xl mx-auto grid md:grid-cols-4 gap-10">
           {[
-            { step: "1", title: "Diagnóstico", desc: "Avaliamos riscos e mapeamos sua infraestrutura de nuvem." },
-            { step: "2", title: "Planejamento", desc: "Desenvolvemos estratégias seguras e personalizadas." },
-            { step: "3", title: "Implementação", desc: "Executamos com automação e monitoramento contínuo." },
-            { step: "4", title: "Evolução", desc: "Acompanhamos e aprimoramos continuamente suas operações." },
+            {
+              step: "1",
+              title: "Diagnóstico",
+              desc: "Avaliamos riscos e mapeamos sua infraestrutura de nuvem.",
+            },
+            {
+              step: "2",
+              title: "Planejamento",
+              desc: "Desenvolvemos estratégias seguras e personalizadas.",
+            },
+            {
+              step: "3",
+              title: "Implementação",
+              desc: "Executamos com automação e monitoramento contínuo.",
+            },
+            {
+              step: "4",
+              title: "Evolução",
+              desc: "Acompanhamos e aprimoramos continuamente suas operações.",
+            },
           ].map((p, i) => (
-            <div key={i} className="bg-white p-8 rounded-xl shadow-md border border-gray-200 hover:shadow-xl transition">
-              <div className="text-cyan-500 text-2xl font-bold mb-3">{p.step}</div>
+            <div
+              key={i}
+              className="bg-white p-8 rounded-xl shadow-md border border-gray-200 hover:shadow-xl transition"
+              data-aos="fade-right"
+              data-aos-delay={i * 300}
+              data-aos-duration="1200"
+            >
+              <div className="text-cyan-500 text-2xl font-bold mb-3">
+                {p.step}
+              </div>
               <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
               <p className="text-gray-600 text-sm">{p.desc}</p>
             </div>
@@ -233,5 +248,103 @@ export default function Services() {
         </a>
       </section>
     </main>
+  );
+}
+
+/* 🔢 COMPONENTE DE BENEFÍCIOS COM CONTAGEM */
+function BenefitsSection() {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) setVisible(true);
+      },
+      { threshold: 0.3 }
+    );
+    if (ref.current) obs.observe(ref.current);
+    return () => ref.current && obs.unobserve(ref.current);
+  }, []);
+
+  return (
+    <section ref={ref} className="py-20 bg-[#001B3A] text-white text-center">
+      <div className="max-w-6xl mx-auto space-y-10 px-6">
+        <h2 className="text-3xl font-bold text-cyan-300">
+          Por que empresas escolhem a VaultCloud?
+        </h2>
+        <div className="grid md:grid-cols-4 gap-10">
+          <Benefit value={99.9} suffix="%" label="de disponibilidade garantida" visible={visible} />
+          <Benefit value={50} prefix="+" label="empresas atendidas com sucesso" visible={visible} />
+          <BenefitStatic label="monitoramento e resposta contínua" text="24/7" />
+          <BenefitStatic label="padrões globais de segurança" text="ISO 27001" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* Número animado */
+function Benefit({
+  value,
+  prefix = "",
+  suffix = "",
+  label,
+  visible,
+}: {
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  label: string;
+  visible: boolean;
+}) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!visible) return;
+    let start = 0;
+    const duration = 2000;
+    const step = 20;
+    const totalSteps = duration / step;
+    const increment = value / totalSteps;
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        clearInterval(timer);
+        setCount(value);
+      } else {
+        setCount(Number(start.toFixed(1)));
+      }
+    }, step);
+
+    return () => clearInterval(timer);
+  }, [visible, value]);
+
+  return (
+    <div>
+      <h3 className="text-cyan-400 text-2xl font-bold mb-2">
+        {prefix}
+        {count}
+        {suffix}
+      </h3>
+      <p className="text-gray-300">{label}</p>
+    </div>
+  );
+}
+
+/* Texto estático (para ISO e 24/7) */
+function BenefitStatic({
+  label,
+  text,
+}: {
+  label: string;
+  text: string;
+}) {
+  return (
+    <div>
+      <h3 className="text-cyan-400 text-2xl font-bold mb-2">{text}</h3>
+      <p className="text-gray-300">{label}</p>
+    </div>
   );
 }

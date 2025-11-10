@@ -1,7 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 
-import HeroImg from "../assets/hero-blog.png"; // 🌟 substitua pela sua imagem
+import HeroImg from "../assets/hero-blog.png";
 import CloudSecurity from "../assets/blog-cloud.png";
 import DataAI from "../assets/blog-ai.png";
 import Governance from "../assets/blog-governance.png";
@@ -78,6 +78,10 @@ export default function Blog() {
               <div
                 key={i}
                 className="group bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                data-aos="fade-up"
+                data-aos-delay={i * 200}
+                data-aos-duration="1200"
+
               >
                 <img
                   src={p.image}
