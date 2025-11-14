@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Consultoria from "../../assets/consultoria.png";
+
 import {
   Shield,
   Lock,
@@ -82,7 +82,7 @@ export default function Services() {
   return (
     <main className="text-[#001B3A]">
       {/* INTRO */}
-      <section className="py-24 bg-gradient-to-b from-[#0A0B23] to-[#001B3A] text-white text-center px-6">
+      <section id="services" className="py-24 bg-gradient-to-b from-[#0A0B23] to-[#001B3A] text-white text-center px-6">
         <div className="max-w-3xl mx-auto space-y-6 mt-18">
           <h1 className="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
             Soluções que protegem o futuro da sua nuvem
@@ -96,7 +96,7 @@ export default function Services() {
       </section>
 
       {/* SERVIÇOS */}
-      <section id="services" className="py-24 bg-[#F5F7FB]">
+      <section className="py-24 bg-[#F5F7FB]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
@@ -194,14 +194,22 @@ export default function Services() {
         </div>
       </section>
 
-      {/* DIFERENCIAIS */}
+
+      {/* DIFERENCIAIS + CTA FINAL */}
       <section className="py-24 bg-[#0B1F3A] text-white px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-6">
-              Diferenciais VaultCloud Experts
-            </h2>
-            <ul className="space-y-3 text-gray-300">
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Título */}
+          <h2 className="text-4xl font-bold mb-6">
+            Diferenciais VaultCloud Experts
+          </h2>
+          <p className="text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            A VaultCloud combina experiência prática com inovação contínua.
+            Atuamos em todos os pilares da segurança em nuvem: prevenção, detecção e resposta.
+          </p>
+
+          {/* Lista em duas colunas */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 justify-items-start md:justify-items-center mb-16">
+            <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-2">
                 <CheckCircle className="text-cyan-400 w-5 h-5" />
                 Especialistas certificados em AWS, Azure e GCP
@@ -210,6 +218,9 @@ export default function Services() {
                 <CheckCircle className="text-cyan-400 w-5 h-5" />
                 Governança e automação personalizadas
               </li>
+            </ul>
+
+            <ul className="space-y-4 text-gray-300">
               <li className="flex items-center gap-2">
                 <CheckCircle className="text-cyan-400 w-5 h-5" />
                 Conformidade com NIST, ISO27001 e LGPD
@@ -220,33 +231,27 @@ export default function Services() {
               </li>
             </ul>
           </div>
-          <div className="flex justify-center">
-            <img
-              src={Consultoria}
-              alt="Consultoria em segurança cloud"
-              className="rounded-lg shadow-2xl w-[550px] h-[400px]"
-            />
+
+          {/* CTA FINAL (INTEGRADO) */}
+          <div className="bg-[#001B3A] rounded-xl py-16 px-8 shadow-lg border border-cyan-600/10">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6">
+              Pronto para proteger e evoluir sua nuvem?
+            </h3>
+            <p className="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
+              Fale com nossos especialistas e descubra como a VaultCloud pode
+              fortalecer a segurança e a eficiência da sua infraestrutura.
+            </p>
+            <a
+              href="https://wa.me/5599999999999"
+              target="_blank"
+              className="inline-block bg-cyan-500 text-white font-semibold px-10 py-4 rounded-md hover:bg-cyan-400 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(34,211,238,0.6)]"
+            >
+              Falar com um especialista
+            </a>
           </div>
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section className="py-24 bg-[#001B3A] text-center text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Pronto para proteger e evoluir sua nuvem?
-        </h2>
-        <p className="text-lg mb-8 text-gray-300">
-          Fale com nossos especialistas e descubra como a VaultCloud pode
-          fortalecer a segurança e a eficiência da sua infraestrutura.
-        </p>
-        <a
-          href="https://wa.me/5599999999999"
-          target="_blank"
-          className="inline-block bg-cyan-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-cyan-400 transition"
-        >
-          Falar com um especialista
-        </a>
-      </section>
     </main>
   );
 }

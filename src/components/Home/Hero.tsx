@@ -4,8 +4,9 @@ import dashbordImg from "../../assets/dashboard.png";
 import ReuniaoImg from "../../assets/reuniao-corporativa.png";
 import Fingerprint from "../../assets/fingerprint.png";
 import Notebook from "../../assets/notebook.png";
-import Equipe from "../../assets/Equipe.png";
+
 import { Lock } from "lucide-react";
+import CertificationsLoop from "./CertificationsLoop";
 
 export default function Hero() {
   return (
@@ -121,33 +122,30 @@ export default function Hero() {
 
       {/* 3️⃣ SEÇÃO POR QUE ESCOLHER */}
       <section className="py-24 bg-[#0B1F3A] text-white px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-6">
-              Por que escolher a VaultCloud Experts?
-            </h2>
-            <p className="text-gray-300 leading-relaxed mb-6">
-              A VaultCloud combina experiência prática com inovação contínua.
-              Atuamos em todos os pilares da segurança em nuvem: prevenção,
-              detecção e resposta.
-            </p>
-            <ul className="space-y-3 text-gray-300">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Por que escolher a VaultCloud Experts?
+          </h2>
+          <p className="text-gray-300 leading-relaxed mb-10 max-w-2xl mx-auto">
+            A VaultCloud combina experiência prática com inovação contínua.
+            Atuamos em todos os pilares da segurança em nuvem: prevenção,
+            detecção e resposta.
+          </p>
+
+          {/* Lista em duas colunas */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ml-20 text-left max-w-4xl mx-auto">
+            <ul className=" space-y-8 text-gray-300">
               <li>✅ Especialistas certificados em AWS, Azure e GCP</li>
               <li>✅ Governança e automação personalizadas</li>
+            </ul>
+            <ul className="space-y-8 text-gray-300">
               <li>✅ Conformidade com NIST, ISO27001 e LGPD</li>
               <li>✅ Monitoramento e resposta 24/7</li>
             </ul>
           </div>
-
-          <div className="flex justify-center">
-            <img
-              src={Equipe}
-              alt="Consultoria VaultCloud"
-              className=" mr-0 md:ml-20 rounded-lg shadow-2xl w-[600px] object-cover"
-            />
-          </div>
         </div>
       </section>
+
 
       {/* 4️⃣ CTA FINAL */}
       <section
@@ -177,6 +175,9 @@ export default function Hero() {
           </a>
         </div>
       </section>
+
+      {/* 5️⃣ SEÇÃO DE CERTIFICAÇÕES */}
+      <CertificationsLoop />
     </>
   );
 }
