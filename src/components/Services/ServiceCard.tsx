@@ -135,14 +135,7 @@ export default function Services() {
             })}
           </div>
 
-          <div className="text-center mt-16">
-            <a
-              href="#contact"
-              className="inline-block bg-[#001B3A] text-white px-10 py-3 rounded-md font-semibold hover:bg-cyan-600 transition"
-            >
-              Falar com um especialista
-            </a>
-          </div>
+         
         </div>
       </section>
 
@@ -242,7 +235,7 @@ export default function Services() {
               fortalecer a segurança e a eficiência da sua infraestrutura.
             </p>
             <a
-              href="https://wa.me/5599999999999"
+              href="https://wa.me/5511952722199"
               target="_blank"
               className="inline-block bg-cyan-500 text-white font-semibold px-10 py-4 rounded-md hover:bg-cyan-400 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(34,211,238,0.6)]"
             >

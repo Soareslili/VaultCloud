@@ -1,5 +1,5 @@
 
-import ContactHero from "../../assets/contact-hero.png"; 
+import ContactHero from "../../assets/contact-hero.png";
 
 
 export default function Contact() {
@@ -34,43 +34,68 @@ export default function Contact() {
           Preencha o formulário abaixo e nossa equipe retornará o contato o mais breve possível.
         </p>
 
-        <form className="space-y-6 bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+        <form
+          action="https://formsubmit.co/lidianesantossoares2@gmail.com"
+          method="POST"
+          className="space-y-6 bg-white p-8 rounded-2xl shadow-md border border-gray-100"
+        >
+
+          {/* CONFIGURAÇÕES */}
+          <input type="hidden" name="_subject" value="Nova mensagem do site VaultCloud Experts" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://vaultcloudexperts.cloud/obrigado" />
+          {/* Trocar pelo link da página de obrigado */}
+
+          {/* CAMPOS */}
           <div className="grid md:grid-cols-2 gap-6">
             <input
               type="text"
+              name="Nome"
               placeholder="Nome"
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm"
+              required
+              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm"
             />
+
             <input
               type="email"
+              name="Email"
               placeholder="E-mail corporativo"
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm"
+              required
+              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm"
             />
+
             <input
               type="tel"
+              name="Telefone"
               placeholder="Telefone"
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm"
+              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm"
             />
+
             <input
               type="text"
+              name="Empresa"
               placeholder="Empresa"
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm"
+              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm"
             />
           </div>
 
           <textarea
+            name="Mensagem"
             placeholder="Mensagem"
             rows={5}
-            className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm resize-none"
+            required
+            className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm resize-none"
           ></textarea>
 
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <input type="checkbox" id="privacy" className="accent-blue-600 w-4 h-4" />
-            <label htmlFor="privacy">
+            <input type="checkbox" required className="accent-blue-600 w-4 h-4" />
+            <label>
               Concordo com a política de privacidade da <strong>VaultCloud Experts</strong>.
             </label>
           </div>
 
+          {/* BOTÃO */}
           <button
             type="submit"
             className="w-full bg-[#001B3A] text-white font-semibold py-3 rounded-xl shadow-md hover:bg-blue-900 transition-all"
@@ -78,11 +103,13 @@ export default function Contact() {
             Enviar mensagem
           </button>
         </form>
+
+
       </div>
 
-    
-    
-      
+
+
+
     </section>
   );
 }

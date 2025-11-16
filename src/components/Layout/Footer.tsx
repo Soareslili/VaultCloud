@@ -19,17 +19,7 @@ const Footer = () => {
               Protegendo o futuro da sua nuvem com soluções de segurança, automação e governança.
             </p>
 
-            <div className="flex gap-4">
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-300 hover:text-[#22d3ee] transition-colors">
-              <Instagram className="w-6 h-6" />
-              </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-300 hover:text-[#22d3ee] transition-colors">
-              <Facebook className="w-6 h-6" />
-              </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-300 hover:text-[#22d3ee] transition-colors">
-              <Linkedin className="w-6 h-6" />
-              </a>
-            </div>
+            
           </div>
 
           {/* Quick Links */}
@@ -76,12 +66,9 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-gray-300">
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-accent" />
-                <span>contato@vaultcloud.com.br</span>
+                <span>comercial@vaultcloudexperts.cloud</span>
               </li>
-              <li className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-accent" />
-                <span>(11) 99999-9999</span>
-              </li>
+             
               <li className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-accent" />
                 <span>São Paulo, SP</span>

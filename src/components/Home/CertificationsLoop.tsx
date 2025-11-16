@@ -1,18 +1,24 @@
 import React from "react";
-import aws from "../../assets/aws.svg";
+import aws from "../../assets/aws.png";
 import azure from "../../assets/azure.svg";
-import gcp from "../../assets/gcp.svg";
 import iso from "../../assets/iso.svg";
 import nist from "../../assets/nist.png";
 import lgpd from "../../assets/lgpd.png";
+import exin from "../../assets/EXIN.png"
+import devops from "../../assets/Devops.png"
+import oracle from "../../assets/oracle.png"
+import cybersecurity from "../../assets/cybersecurity.png"
+import engineer from "../../assets/googleEngineer.png"
+import architect from "../../assets/goggleArchitect.png"
+
 
 export default function CertificationsLoop() {
-  const logos = [aws, azure, gcp, iso, nist, lgpd];
+  const logos = [aws, azure,  iso, nist, lgpd, exin, devops, oracle, cybersecurity, engineer, architect];
 
   return (
-    <section className="py-20 bg-[#0B1F3A] text-white overflow-hidden">
+    <section className="py-20 bg-[#f0f3f5] text-white overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16">
+        <h2 className=" text-black text-3xl md:text-4xl font-bold mb-16">
           Certificações e Padrões que Fortalecem a Confiança
         </h2>
 
@@ -23,7 +29,7 @@ export default function CertificationsLoop() {
                 key={i}
                 src={logo}
                 alt="Certificação"
-                className="h-16 w-auto opacity-80 hover:opacity-100 transition-transform hover:scale-110"
+                className="h-20 w-auto opacity-80 hover:opacity-100 transition-transform hover:scale-110"
               />
             ))}
           </div>
