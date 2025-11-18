@@ -1,8 +1,51 @@
-
+import { useState } from "react";
 import ContactHero from "../../assets/contact-hero.png";
 
 
 export default function Contact() {
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<null | "success" | "error">(null);
+
+  const API_URL = "http://localhost:4000/send-email"; // ajustar para produção se necessário
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus(null);
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      name: String(fd.get("name") || ""),
+      email: String(fd.get("email") || ""),
+      phone: String(fd.get("phone") || ""),
+      company: String(fd.get("company") || ""),
+      message: String(fd.get("message") || ""),
+    };
+
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Erro no envio");
+      setStatus("success");
+      form.reset();
+      // opcional: redirecionar para página de obrigado
+      // window.location.href = "https://vaultcloudexperts.cloud/obrigado";
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+
+
+
   return (
     <section className="bg-white text-[#001B3A]">
       {/* HERO */}
@@ -34,24 +77,19 @@ export default function Contact() {
           Preencha o formulário abaixo e nossa equipe retornará o contato o mais breve possível.
         </p>
 
-        <form
-          action="https://formsubmit.co/lidianesantossoares2@gmail.com"
-          method="POST"
+         <form
+          onSubmit={handleSubmit}
           className="space-y-6 bg-white p-8 rounded-2xl shadow-md border border-gray-100"
         >
-
-          {/* CONFIGURAÇÕES */}
+          {/* CONFIGURAÇÕES (se precisar manter hidden inputs) */}
           <input type="hidden" name="_subject" value="Nova mensagem do site VaultCloud Experts" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_next" value="https://vaultcloudexperts.cloud/obrigado" />
-          {/* Trocar pelo link da página de obrigado */}
 
-          {/* CAMPOS */}
+          {/* CAMPOS - names ajustados para o backend */}
           <div className="grid md:grid-cols-2 gap-6">
             <input
               type="text"
-              name="Nome"
+              name="name"
               placeholder="Nome"
               required
               className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm"
@@ -59,7 +97,7 @@ export default function Contact() {
 
             <input
               type="email"
-              name="Email"
+              name="email"
               placeholder="E-mail corporativo"
               required
               className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm"
@@ -67,21 +105,21 @@ export default function Contact() {
 
             <input
               type="tel"
-              name="Telefone"
+              name="phone"
               placeholder="Telefone"
               className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm"
             />
 
             <input
               type="text"
-              name="Empresa"
+              name="company"
               placeholder="Empresa"
               className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 shadow-sm"
             />
           </div>
 
           <textarea
-            name="Mensagem"
+            name="message"
             placeholder="Mensagem"
             rows={5}
             required
@@ -95,12 +133,16 @@ export default function Contact() {
             </label>
           </div>
 
+          {status === "success" && <p className="text-green-600">Mensagem enviada com sucesso.</p>}
+          {status === "error" && <p className="text-red-600">Erro ao enviar a mensagem. Tente novamente.</p>}
+
           {/* BOTÃO */}
           <button
             type="submit"
-            className="w-full bg-[#001B3A] text-white font-semibold py-3 rounded-xl shadow-md hover:bg-blue-900 transition-all"
+            disabled={loading}
+            className="w-full bg-[#001B3A] text-white font-semibold py-3 rounded-xl shadow-md hover:bg-blue-900 transition-all disabled:opacity-60"
           >
-            Enviar mensagem
+            {loading ? "Enviando..." : "Enviar mensagem"}
           </button>
         </form>
 
