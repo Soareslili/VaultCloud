@@ -1,6 +1,8 @@
+
+
 export default function About() {
   return (
-    <section className="pt-28 pb-24 px-6 max-w-6xl mx-auto text-center md:text-left">
+    <section className="pt-28 pb-24 mt-20 px-6 max-w-6xl mx-auto text-center md:text-left">
       {/* Título */}
       <h1 className="text-4xl font-bold text-primary mb-6">
         Sobre a VaultCloud Experts

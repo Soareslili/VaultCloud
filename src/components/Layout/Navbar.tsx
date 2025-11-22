@@ -34,11 +34,11 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md  z-50 shadow-[var(--shadow-soft)]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between h-20 ">
         
           <Link to="/" className="flex items-center space-x-3 group">
-             <img src={logo} alt="logo-empresa" className=" md:h-24 w-34 ml-20" />
+             <img src={logo} alt="logo-empresa" className=" md:h-24 w-24 ml-24" />
           </Link>
 
           {/* Desktop Navigation */}
