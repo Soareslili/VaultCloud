@@ -41,7 +41,7 @@ const Navbar = () => {
              <img src={logo} alt="logo-empresa" className=" md:h-24 w-24 ml-24" />
           </Link>
 
-          {/* Desktop Navigation */}
+        
           <div className="hidden md:flex items-center space-x-1 gap-10 font-Inter font-bold">
             {navItems.map((item) => (
               <Link key={item.path} to={item.path}>
@@ -59,7 +59,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Search Bar */}
+       
           <form onSubmit={handleSearch} className="hidden lg:flex items-center space-x-2">
             <div className="relative">
               <Search className="absolute left-3 cursor-pointer top-1/2 -translate-y-1/2 w-4 h-4 text-card-foreground" />
@@ -73,7 +73,7 @@ const Navbar = () => {
             </div>
           </form>
 
-          {/* Mobile Menu Button */}
+         
           <a
            
             className="md:hidden"
@@ -83,7 +83,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu */}
+       
         {isOpen && (
           <div className="md:hidden py-4 space-y-4 animate-fade-in">
             <form onSubmit={handleSearch} className="px-2">

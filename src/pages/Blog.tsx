@@ -45,7 +45,7 @@ const posts = [
 export default function Blog() {
   return (
     <>
-      {/* HERO SECTION */}
+    
       <section
         className="relative min-h-[75vh] flex items-center justify-center text-center text-white px-6 overflow-hidden"
         style={{
@@ -66,7 +66,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* BLOG POSTS */}
+     
       <section className="py-24 bg-[#F5F7FB] text-[#001B3A]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="text-4xl font-bold text-center mb-12">
@@ -95,12 +95,7 @@ export default function Blog() {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {p.desc}
                   </p>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all"
-                  >
-                    Ler mais <ArrowRight className="w-4 h-4" />
-                  </a>
+                  
                 </div>
               </div>
             ))}
@@ -108,7 +103,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
+     
       <section className="py-20 bg-[#001B3A] text-center text-white px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Pronto para proteger e evoluir sua nuvem?
@@ -117,7 +112,7 @@ export default function Blog() {
           Fale com nossos especialistas e descubra como a VaultCloud pode fortalecer sua infraestrutura e acelerar sua inovação.
         </p>
         <a
-          href="https://wa.me/5599999999999"
+          href="https://wa.me/5511952722199"
           target="_blank"
           className="inline-block bg-white text-[#001B3A] font-semibold px-8 py-3 rounded-md hover:bg-cyan-600 hover:text-white transition"
         >

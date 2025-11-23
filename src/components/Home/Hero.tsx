@@ -11,12 +11,12 @@ import CertificationsLoop from "./CertificationsLoop";
 export default function Hero() {
   return (
     <>
-      {/* HERO SECTION */}
+    
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-start text-left text-white px-6 md:px-16 overflow-hidden"
       >
-        {/* Fundo */}
+     
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#0A0B23]/95 via-[#001B3A]/80 to-transparent"></div>
         </div>
 
-        {/* Conteúdo */}
+       
         <div className="font-Inter relative z-10 max-w-2xl mt-24 md:mt-20 space-y-6">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#112240] to-[#0A192F] border border-cyan-400/50 text-cyan-300 px-4 py-2 rounded-full shadow-[0_0_10px_rgba(0,255,255,0.3)] backdrop-blur-md">
             <Lock className="w-4 h-4 text-cyan-300" />
@@ -61,7 +61,7 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* 2️⃣ SEÇÃO DE SERVIÇOS */}
+    
       <section className="py-24 bg-[#F5F7FB] text-center px-6">
         <h2 className="text-4xl font-bold text-[#001B3A] mb-12">
           Nossos Principais Serviços
@@ -117,10 +117,10 @@ export default function Hero() {
         </a>
       </section>
 
-      {/* 1️⃣ SEÇÃO DE CONFIANÇA / NÚMEROS */}
+     
       <StatsSection />
 
-      {/* 3️⃣ SEÇÃO POR QUE ESCOLHER */}
+      
       <section className="py-24 bg-[#0B1F3A] text-white px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
@@ -132,7 +132,7 @@ export default function Hero() {
             detecção e resposta.
           </p>
 
-          {/* Lista em duas colunas */}
+         
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ml-20 text-left max-w-4xl mx-auto">
             <ul className=" space-y-8 text-gray-300">
               <li>✅ Especialistas certificados em AWS, Azure e GCP</li>
@@ -147,7 +147,7 @@ export default function Hero() {
       </section>
 
 
-      {/* 4️⃣ CTA FINAL */}
+   
       <section
         className="relative py-24 text-center text-white"
         style={{
@@ -176,13 +176,13 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* 5️⃣ SEÇÃO DE CERTIFICAÇÕES */}
+     
       <CertificationsLoop />
     </>
   );
 }
 
-// 🔢 SEÇÃO DE ESTATÍSTICAS COM ANIMAÇÃO
+
 function StatsSection() {
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
