@@ -1,4 +1,5 @@
-import { Mail, MapPin, Phone, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+
 import { Link } from "react-router-dom";
 
 import logo from '../../assets/Logo.png'

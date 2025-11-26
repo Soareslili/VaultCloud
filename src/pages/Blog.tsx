@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+
 
 import HeroImg from "../assets/hero-blog.png";
 import CloudSecurity from "../assets/blog-cloud.png";
@@ -111,13 +111,7 @@ export default function Blog() {
         <p className="text-gray-300 mb-8">
           Fale com nossos especialistas e descubra como a VaultCloud pode fortalecer sua infraestrutura e acelerar sua inovação.
         </p>
-        <a
-          href="https://wa.me/5511952722199"
-          target="_blank"
-          className="inline-block bg-white text-[#001B3A] font-semibold px-8 py-3 rounded-md hover:bg-cyan-600 hover:text-white transition"
-        >
-          Falar com um especialista
-        </a>
+       
       </section>
     </>
   );

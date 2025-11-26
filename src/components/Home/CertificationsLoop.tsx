@@ -1,4 +1,4 @@
-import React from "react";
+
 import aws from "../../assets/aws.png";
 import azure from "../../assets/azure.svg";
 import iso from "../../assets/iso.svg";

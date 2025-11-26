@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-
 import {
   Shield,
   Lock,
@@ -10,6 +9,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 
+/* -------------------- SERVICES LIST -------------------- */
 const services = [
   {
     title: "Cloud Strategy & Roadmap",
@@ -78,24 +78,23 @@ const services = [
   },
 ];
 
+
 export default function Services() {
   return (
     <main className="text-[#001B3A]">
-      {/* INTRO */}
+     
       <section id="services" className="py-24 bg-gradient-to-b from-[#0A0B23] to-[#001B3A] text-white text-center px-6">
-        <div className="max-w-3xl mx-auto space-y-6 mt-18">
-          <h1 className="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <h1 className="text-5xl font-extrabold mt-10 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
             Soluções que protegem o futuro da sua nuvem
           </h1>
           <p className="text-gray-300 text-lg">
-            Estratégias integradas em segurança, automação e governança
-            multicloud — projetadas para empresas que buscam excelência
-            operacional e conformidade global.
+            Estratégias integradas em segurança, automação e governança multicloud — projetadas para empresas que buscam excelência operacional e conformidade global.
           </p>
         </div>
       </section>
 
-   
+    
       <section className="py-24 bg-[#F5F7FB]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-16 text-center">
@@ -103,8 +102,7 @@ export default function Services() {
               Nossos Serviços
             </h2>
             <p className="text-gray-600 mt-3 text-lg max-w-2xl mx-auto">
-              Soluções completas em segurança, automação e governança multicloud —
-              desenvolvidas por especialistas certificados.
+              Soluções completas em segurança, automação e governança multicloud — desenvolvidas por especialistas certificados.
             </p>
           </div>
 
@@ -127,127 +125,19 @@ export default function Services() {
                       {s.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {s.desc}
-                  </p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               );
             })}
           </div>
-
-         
         </div>
       </section>
 
-     
       <BenefitsSection />
-
-  
-      <section className="py-24 bg-[#F5F7FB] px-6 text-center">
-        <h2 className="text-4xl font-bold text-[#001B3A] mb-12">
-          Como Trabalhamos
-        </h2>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-4 gap-10">
-          {[
-            {
-              step: "1",
-              title: "Diagnóstico",
-              desc: "Avaliamos riscos e mapeamos sua infraestrutura de nuvem.",
-            },
-            {
-              step: "2",
-              title: "Planejamento",
-              desc: "Desenvolvemos estratégias seguras e personalizadas.",
-            },
-            {
-              step: "3",
-              title: "Implementação",
-              desc: "Executamos com automação e monitoramento contínuo.",
-            },
-            {
-              step: "4",
-              title: "Evolução",
-              desc: "Acompanhamos e aprimoramos continuamente suas operações.",
-            },
-          ].map((p, i) => (
-            <div
-              key={i}
-              className="bg-white p-8 rounded-xl shadow-md border border-gray-200 hover:shadow-xl transition"
-              data-aos="fade-right"
-              data-aos-delay={i * 300}
-              data-aos-duration="1200"
-            >
-              <div className="text-cyan-500 text-2xl font-bold mb-3">
-                {p.step}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
-              <p className="text-gray-600 text-sm">{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-
-    
-      <section className="py-24 bg-[#0B1F3A] text-white px-6">
-        <div className="max-w-5xl mx-auto text-center">
-      
-          <h2 className="text-4xl font-bold mb-6">
-            Diferenciais VaultCloud Experts
-          </h2>
-          <p className="text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            A VaultCloud combina experiência prática com inovação contínua.
-            Atuamos em todos os pilares da segurança em nuvem: prevenção, detecção e resposta.
-          </p>
-
-       
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 justify-items-start md:justify-items-center mb-16">
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="text-cyan-400 w-5 h-5" />
-                Especialistas certificados em AWS, Azure e GCP
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="text-cyan-400 w-5 h-5" />
-                Governança e automação personalizadas
-              </li>
-            </ul>
-
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="text-cyan-400 w-5 h-5" />
-                Conformidade com NIST, ISO27001 e LGPD
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="text-cyan-400 w-5 h-5" />
-                Monitoramento e resposta 24/7
-              </li>
-            </ul>
-          </div>
-
-        
-          <div className="bg-[#001B3A] rounded-xl py-16 px-8 shadow-lg border border-cyan-600/10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Pronto para proteger e evoluir sua nuvem?
-            </h3>
-            <p className="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
-              Fale com nossos especialistas e descubra como a VaultCloud pode
-              fortalecer a segurança e a eficiência da sua infraestrutura.
-            </p>
-            <a
-              href="https://wa.me/5511952722199"
-              target="_blank"
-              className="inline-block bg-cyan-500 text-white font-semibold px-10 py-4 rounded-md hover:bg-cyan-400 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:shadow-[0_0_25px_rgba(34,211,238,0.6)]"
-            >
-              Falar com um especialista
-            </a>
-          </div>
-        </div>
-      </section>
-
     </main>
   );
 }
+
 
 
 function BenefitsSection() {
@@ -261,16 +151,19 @@ function BenefitsSection() {
       },
       { threshold: 0.3 }
     );
+
     if (ref.current) obs.observe(ref.current);
-    return () => ref.current && obs.unobserve(ref.current);
+
+    return () => {
+      if (ref.current) obs.unobserve(ref.current);
+      obs.disconnect();
+    };
   }, []);
 
   return (
     <section ref={ref} className="py-20 bg-[#001B3A] text-white text-center">
       <div className="max-w-6xl mx-auto space-y-10 px-6">
-        <h2 className="text-3xl font-bold text-cyan-300">
-          Por que empresas escolhem a VaultCloud?
-        </h2>
+        <h2 className="text-3xl font-bold text-cyan-300">Por que empresas escolhem a VaultCloud?</h2>
         <div className="grid md:grid-cols-4 gap-10">
           <Benefit value={99.9} suffix="%" label="de disponibilidade garantida" visible={visible} />
           <Benefit value={50} prefix="+" label="empresas atendidas com sucesso" visible={visible} />
@@ -281,7 +174,6 @@ function BenefitsSection() {
     </section>
   );
 }
-
 
 function Benefit({
   value,
@@ -300,6 +192,7 @@ function Benefit({
 
   useEffect(() => {
     if (!visible) return;
+
     let start = 0;
     const duration = 2000;
     const step = 20;
@@ -331,14 +224,7 @@ function Benefit({
   );
 }
 
-
-function BenefitStatic({
-  label,
-  text,
-}: {
-  label: string;
-  text: string;
-}) {
+function BenefitStatic({ label, text }: { label: string; text: string }) {
   return (
     <div>
       <h3 className="text-cyan-400 text-2xl font-bold mb-2">{text}</h3>
