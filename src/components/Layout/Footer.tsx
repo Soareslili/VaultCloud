@@ -3,17 +3,30 @@ import { Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import logo from '../../assets/Logo.png'
+import Capa from '../../assets/HeroCapa.jpg'
 
 const Footer = () => {
   return (
-    <footer className="bg-background backdrop-blur-md  relative z-10  shadow-[var(--shadow-soft)] text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="relative z-10  shadow-[var(--shadow-soft)] text-white py-12"
+    
+    style={{
+      background: `URL(${Capa})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+
+    }}
+    >
+      
+     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
       
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
                  <Link to="/" className="flex items-center space-x-3 group">
-             <img src={logo} alt="logo-empresa" className=" md:h-24 w-34" />
+             <img src={logo} alt="logo-empresa" className=" md:h-24 w-30" />
           </Link>
             </div>
             <p className="text-sm text-gray-300">
@@ -26,9 +39,9 @@ const Footer = () => {
         
           <div>
             <h4 className="font-semibold mb-4">Links Rápidos</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2  text-sm text-gray-300">
               <li>
-                <Link to="/" className="hover:text-accent transition-colors">
+                <Link to="/" className=" cursor-pointer hover:text-accent transition-colors">
                   Home
                 </Link>
               </li>

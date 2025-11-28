@@ -10,31 +10,31 @@
  
     --font-Inter: 'Inter', sans-serif;
   
-   --color-background: #0b4f9c;       /* 220 40% 6% */
-  --color-foreground: #0A2540;       /* 0 0% 100% */
+   --color-background: #0b4f9c;       
+  --color-foreground: #0A2540;      
 
-  --color-card: #0095FF;             /* 220 35% 8% */
-  --color-card-foreground: #F8FAFC;  /* 0 0% 100% */
-  --color-popover: #1E293B;          /* 220 35% 8% */
+  --color-card: #0095FF;             
+  --color-card-foreground: #F8FAFC;  
+  --color-popover: #1E293B;          
   
 
 }
 
 
-/* Animação do gradiente */
+
 @keyframes borderFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Botão sólido com brilho (CTA principal) */
+
 .btn-glow {
   position: relative;
-  isolation: isolate;            /* garante blending correto do glow */
+  isolation: isolate;           
   border-radius: 11px;
   color: #fff;
-  background: linear-gradient(90deg,#0ea5e9,#22d3ee,#3b82f6); /* azul→ciano */
+  background: linear-gradient(90deg,#0ea5e9,#22d3ee,#3b82f6); 
   background-size: 200% 200%;
   animation: borderFlow 4s linear infinite;
   box-shadow: 0 0 18px rgba(34,211,238,.35);
@@ -46,7 +46,7 @@
   filter: blur(10px);
 }
 
-/* Botão com BORDA animada (preenchimento escuro) — sem border-image */
+
 .btn-outline-glow{
   position: relative;
   isolation: isolate;
@@ -59,7 +59,7 @@
   background: linear-gradient(90deg,#3b82f6,#22d3ee,#3b82f6);
   background-size: 200% 200%;
   animation: borderFlow 3.5s linear infinite;
-  /* cria SÓ a borda usando máscara */
+
   -webkit-mask: 
     linear-gradient(#000 0 0) content-box, 
     linear-gradient(#000 0 0);

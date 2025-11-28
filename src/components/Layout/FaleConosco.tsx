@@ -35,7 +35,7 @@ export default function Contact() {
         </p>
 
         <form
-          action="https://formsubmit.co/claudio0003@gmail.com"
+          action="https://formsubmit.co/comercial@vaultcloudexperts.cloud"
           method="POST"
           className="space-y-6 bg-white p-8 rounded-2xl shadow-md border border-gray-100"
         >

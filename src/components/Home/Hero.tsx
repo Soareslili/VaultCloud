@@ -133,8 +133,8 @@ export default function Hero() {
           </p>
 
          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ml-20 text-left max-w-4xl mx-auto">
-            <ul className=" space-y-8 text-gray-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto ml-0 md:ml-12">
+            <ul className="space-y-8 text-gray-300">
               <li>✅ Especialistas certificados em AWS, Azure e GCP</li>
               <li>✅ Governança e automação personalizadas</li>
             </ul>

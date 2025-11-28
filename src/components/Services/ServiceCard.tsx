@@ -6,10 +6,9 @@ import {
   Cpu,
   Server,
   Network,
-  CheckCircle,
 } from "lucide-react";
 
-/* -------------------- SERVICES LIST -------------------- */
+
 const services = [
   {
     title: "Cloud Strategy & Roadmap",
@@ -76,6 +75,12 @@ const services = [
     desc: "Capacite sua equipe em Cloud Security, DevSecOps, Zero Trust e Resposta a Incidentes.",
     icon: Network,
   },
+  {
+  title: "DRP IT/OT – Disaster Recovery",
+  desc: "Plano de Recuperação de Desastres para ambientes críticos IT/OT, com base em NIST, ISO 22301 e IEC 62443.",
+  icon: Server,
+}
+
 ];
 
 
