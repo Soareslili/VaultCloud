@@ -22,7 +22,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Serviços", path: "/services" },
     { name: "Sobre Nós", path: "/about" },
-    { name: "Blog", path: "/blog" },
+    { name: "Insights ", path: "/blog" },
     { name: "Fale Conosco", path: "/contact" },
   ];
 

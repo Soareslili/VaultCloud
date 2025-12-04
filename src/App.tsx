@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import FaleConosco from "./components/Layout/FaleConosco";
 import AOSInit from "./components/ui/AOSInit";
 import Obrigado from "./pages/Obrigado";
+import ScrollToTop from "./components/ui/ScrollToTop";
 
 
 
@@ -17,6 +18,7 @@ import Obrigado from "./pages/Obrigado";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-neutral">
         <Navbar />
 
