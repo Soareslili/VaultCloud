@@ -66,8 +66,8 @@ export default function About() {
         <h2 className="text-2xl font-semibold text-primary mb-6">
           Nossos Diferenciais
         </h2>
-        <ul className="text-gray-700 space-y-2 list-disc list-inside">
-          <li>✅ Especialistas certificados em AWS, Azure e Google Cloud</li>
+        <ul className="text-gray-700 space-y-2 list-inside list-none">
+          <li className="">✅ Especialistas certificados em AWS, Azure e Google Cloud</li>
           <li>✅ Expertise em Zero Trust, DevSecOps, Compliance (LGPD, ISO 27001 e NIST)</li>
           <li>✅ Monitoramento e resposta a incidentes 24/7</li>
           <li>✅ Implementações seguras com Terraform, Ansible, SIEM e SOAR</li>

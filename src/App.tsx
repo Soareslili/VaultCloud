@@ -9,6 +9,9 @@ import FaleConosco from "./components/Layout/FaleConosco";
 import AOSInit from "./components/ui/AOSInit";
 import Obrigado from "./pages/Obrigado";
 import ScrollToTop from "./components/ui/ScrollToTop";
+import CloudRisk from "./components/Services/CloudRisk";
+import VaultCloudPAM from "./components/Services/VaultCloudPAM";
+import DevSecPipeline from "./components/Services/DevSecPipeline";
 
 
 
@@ -32,6 +35,11 @@ function App() {
             <Route path="/contact" element={<FaleConosco />} />
             <Route path="/obrigado" element={<Obrigado />} />
 
+
+            <Route path="/cloud-risk" element={ <CloudRisk /> } />
+            <Route path="/vaultcloud-pam" element={ <VaultCloudPAM /> } />
+            <Route path="/devsec-pipeline" element={ <DevSecPipeline /> } />
+            
           </Routes>
 
          
