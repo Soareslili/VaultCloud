@@ -1,15 +1,15 @@
 
-import aws from "../../assets/aws.png";
-import azure from "../../assets/azure.svg";
-import iso from "../../assets/iso.svg";
-import nist from "../../assets/nist.png";
-import lgpd from "../../assets/lgpd.png";
-import exin from "../../assets/EXIN.png"
-import devops from "../../assets/Devops.png"
-import oracle from "../../assets/oracle.png"
-import cybersecurity from "../../assets/cybersecurity.png"
-import engineer from "../../assets/googleEngineer.png"
-import architect from "../../assets/goggleArchitect.png"
+import aws from "../assets/aws.png";
+import azure from "../assets/azure.svg";
+import iso from "../assets/iso.svg";
+import nist from "../assets/nist.png";
+import lgpd from "../assets/lgpd.png";
+import exin from "../assets/EXIN.png"
+import devops from "../assets/Devops.png"
+import oracle from "../assets/oracle.png"
+import cybersecurity from "../assets/cybersecurity.png"
+import engineer from "../assets/googleEngineer.png"
+import architect from "../assets/goggleArchitect.png"
 
 
 export default function CertificationsLoop() {

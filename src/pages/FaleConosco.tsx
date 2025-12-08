@@ -1,4 +1,4 @@
-import ContactHero from "../../assets/contact-hero.png";
+import ContactHero from "../assets/contact-hero.png";
 
 export default function Contact() {
   return (

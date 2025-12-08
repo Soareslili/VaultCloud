@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 
 import HeroImg from "../assets/hero-blog.png";
@@ -9,36 +9,43 @@ import Innovation from "../assets/blog-innovation.png";
 import Team from "../assets/blog-team.png";
 import Cyber from "../assets/blog-cyber.png";
 
+
 const posts = [
   {
     image: CloudSecurity,
     title: "Zero Trust: o novo padrão de segurança em nuvem",
     desc: "Entenda como o modelo Zero Trust fortalece a defesa cibernética e garante compliance em ambientes multicloud.",
+    link: "/blog/zero-trust"
   },
   {
     image: DataAI,
     title: "IA e automação: o futuro da segurança digital",
     desc: "Descubra como a inteligência artificial está transformando o monitoramento e resposta a incidentes.",
+    link: "/blog/ia-automacao"
   },
   {
     image: Governance,
     title: "Governança Cloud: pilares para uma gestão eficiente",
     desc: "A importância da governança e boas práticas na sustentação de infraestruturas seguras e escaláveis.",
+    link: "/blog/governanca-cloud"
   },
   {
     image: Innovation,
     title: "Inovação e competitividade com CloudOps",
     desc: "Veja como empresas estão modernizando seus processos com automação e FinOps inteligentes.",
+    link: "/blog/cloudops"
   },
   {
     image: Team,
     title: "O papel da cultura DevSecOps",
     desc: "Integração de segurança desde o início do ciclo de desenvolvimento para prevenir vulnerabilidades.",
+    link: "/blog/devsecops"
   },
   {
     image: Cyber,
     title: "Ciberataques: os hackers estão preparados. E você?",
     desc: "A importância vital da cibersegurança em um mundo cada vez mais digital e conectado.",
+    link: "/blog/ciberataques"
   },
 ];
 
@@ -95,6 +102,13 @@ export default function Blog() {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {p.desc}
                   </p>
+
+                    <Link
+                  to={p.link}
+                  className="inline-block mt-2 text-blue-600 font-semibold hover:underline"
+                >
+                  Saiba mais →
+                </Link>
                   
                 </div>
               </div>

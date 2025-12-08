@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 
-import logo from "../../assets/Logo.png"
-import Capa from "../../assets/HeroCapa.jpg"
+import logo from "../assets/Logo.png"
+import Capa from "../assets/HeroCapa.jpg"
 
 
 
 import { Search, Menu, X } from "lucide-react";
-import { Input } from "../ui/input";
+import { Input } from "../components/ui/input";
 import { useState } from "react";
 
 

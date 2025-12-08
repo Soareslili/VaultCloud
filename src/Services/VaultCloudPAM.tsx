@@ -1,4 +1,4 @@
-import Fingerprint from "../../assets/fingerprint.png";
+import Fingerprint from "../assets/fingerprint.png";
 
 
 

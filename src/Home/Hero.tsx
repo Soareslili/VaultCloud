@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import BgImg from "../../assets/Hero.png";
-import dashbordImg from "../../assets/dashboard.png";
-import ReuniaoImg from "../../assets/reuniao-corporativa.png";
-import Fingerprint from "../../assets/fingerprint.png";
-import Notebook from "../../assets/notebook.png";
+import BgImg from "../assets/Hero.png";
+import dashbordImg from "../assets/dashboard.png";
+import ReuniaoImg from "../assets/reuniao-corporativa.png";
+import Fingerprint from "../assets/fingerprint.png";
+import Notebook from "../assets/notebook.png";
 
 import { Link } from "react-router-dom";
 

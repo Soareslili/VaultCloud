@@ -1,5 +1,5 @@
 
-import Notebook from "../../assets/notebook.png";
+import Notebook from "../assets/notebook.png";
 
 export default function DevSecPipeline() {
     return (

@@ -1,4 +1,4 @@
-import dashbordImg from "../../assets/dashboard.png";
+import dashbordImg from "../assets/dashboard.png";
 
 export default function CloudRisk() {
     return (
