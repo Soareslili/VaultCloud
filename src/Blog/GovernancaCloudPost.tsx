@@ -1,3 +1,5 @@
+import RelatedPosts from "./RelatedPosts";
+
 import Governance from "../assets/blog-governance.png";
 
 export default function GovernancaCloudPost() {
@@ -56,6 +58,8 @@ export default function GovernancaCloudPost() {
         </p>
 
       </section>
+
+      <RelatedPosts currentSlug="governanca-cloud" />
     </>
   );
 }

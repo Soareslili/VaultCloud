@@ -1,4 +1,7 @@
 import CloudSecurity from "../assets/blog-cloud.png";
+import RelatedPosts from "../Blog/RelatedPosts";
+
+
 
 export default function ZeroTrustPost() {
   return (
@@ -69,8 +72,9 @@ export default function ZeroTrustPost() {
           Implementar Zero Trust não é apenas uma tendência — é uma necessidade para organizações que buscam operar com segurança, 
           eficiência e conformidade no cenário digital atual.
         </p>
-
       </section>
+
+      <RelatedPosts currentSlug="zero-trust" />
     </>
   );
 }

@@ -1,3 +1,5 @@
+import RelatedPosts from "./RelatedPosts";
+
 import Team from "../assets/blog-team.png";
 
 export default function DevSecOpsPost() {
@@ -48,6 +50,8 @@ export default function DevSecOpsPost() {
           Adotar DevSecOps é criar equipes mais ágeis, colaborativas e preparadas para o futuro da segurança digital.
         </p>
       </section>
+
+    <RelatedPosts currentSlug="devsecops" />
     </>
   );
 }

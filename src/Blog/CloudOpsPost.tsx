@@ -1,3 +1,6 @@
+
+import RelatedPosts from "./RelatedPosts";
+
 import Innovation from "../assets/blog-innovation.png";
 
 export default function CloudOpsPost() {
@@ -48,6 +51,8 @@ export default function CloudOpsPost() {
           CloudOps é o caminho para empresas que buscam crescer com eficiência, controle e sustentabilidade financeira.
         </p>
       </section>
+
+    <RelatedPosts currentSlug="cloudops" />
     </>
   );
 }

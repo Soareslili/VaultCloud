@@ -1,4 +1,7 @@
+import RelatedPosts from "./RelatedPosts";
+
 import DataAI from "../assets/blog-ai.png";
+
 
 export default function IAAutomacaoPost() {
   return (
@@ -60,6 +63,7 @@ export default function IAAutomacaoPost() {
         </p>
 
       </section>
+      <RelatedPosts currentSlug="ia-automacao" />
     </>
   );
 }

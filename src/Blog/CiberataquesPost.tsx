@@ -1,3 +1,5 @@
+import RelatedPosts from "./RelatedPosts";
+
 import Cyber from "../assets/blog-cyber.png";
 
 export default function CiberataquesPost() {
@@ -54,6 +56,8 @@ export default function CiberataquesPost() {
           de garantir resiliência digital.
         </p>
       </section>
+
+    <RelatedPosts currentSlug="ciberataques" />
     </>
   );
 }
