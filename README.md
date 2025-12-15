@@ -1,73 +1,133 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+🚀 VaultCloud Experts — Cloud Security & Governance Platform
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Plataforma institucional desenvolvida com React, TypeScript e Vite, focada em segurança em nuvem, governança, automação e compliance, simulando um site real de uma consultoria cloud enterprise.
 
-## React Compiler
+O projeto apresenta serviços completos, páginas detalhadas para cada solução, blog técnico e arquitetura escalável — ideal para portfólio profissional, clientes e recrutadores.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🧠 Visão Geral
 
-## Expanding the ESLint configuration
+A VaultCloud Experts oferece soluções estratégicas em:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Segurança em Nuvem (Cloud Security)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Governança e Compliance
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+DevSecOps e Automação
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Proteção de Dados
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Resposta a Incidentes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Continuidade de Negócios (DRP)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Capacitação Técnica
+
+O site foi desenvolvido com foco em UX moderna, conteúdo técnico real e estrutura de projeto profissional.
+
+🛠️ Tecnologias Utilizadas
+
+React
+
+TypeScript
+
+Vite
+
+Tailwind CSS
+
+React Router DOM
+
+Lucide Icons
+
+AOS (Animate On Scroll)
+
+ESLint
+
+Arquitetura baseada em componentes reutilizáveis
+
+📂 Estrutura do Projeto
+src/
+├── assets/
+├── Blog/
+│   ├── ZeroTrustPost.tsx
+│   ├── IAAutomacaoPost.tsx
+│   ├── GovernancaCloudPost.tsx
+│   ├── CloudOpsPost.tsx
+│   ├── DevSecOpsPost.tsx
+│   └── CiberataquesPost.tsx
+├── components/
+│   ├── ui/
+│   │   ├── BlogCard.tsx
+│   │   ├── ServiceCard.tsx
+│   │   ├── AOSInit.tsx
+│   │   └── ScrollToTop.tsx
+├── Layout/
+│   ├── Navbar.tsx
+│   └── Footer.tsx
+├── Home/
+│   └── Hero.tsx
+├── pages/
+│   ├── About.tsx
+│   ├── Blog.tsx
+│   ├── FaleConosco.tsx
+│   └── Obrigado.tsx
+├── Services/
+│   ├── CloudStrategy.tsx
+│   ├── CloudRiskAssessment.tsx
+│   ├── VaultCloudPAMService.tsx
+│   ├── DevSecPipelineService.tsx
+│   ├── SecureCloudFoundationService.tsx
+│   ├── BackupImmutableVaultService.tsx
+│   ├── CloudCostPerformanceOptimization.tsx
+│   ├── DataProtectionEncryption.tsx
+│   ├── SensitiveDataDiscovery.tsx
+│   ├── ManagedCloudSecurity.tsx
+│   ├── IncidentResponseForensics.tsx
+│   ├── WorkshopsTreinamentos.tsx
+│   └── DRPDisasterRecovery.tsx
+├── App.tsx
+└── main.tsx
+
+🧩 Principais Funcionalidades
+✅ Serviços Detalhados
+
+Cada serviço possui uma página exclusiva com:
+
+Descrição estratégica
+
+Abordagem técnica
+
+Entregáveis
+
+Benefícios
+
+Público-alvo
+
+CTA (Call To Action)
+
+📝 Blog Técnico
+
+Artigos sobre Cloud Security, Zero Trust, DevSecOps, IA, Governança e Cibersegurança
+
+Sistema de posts relacionados
+
+Estrutura escalável para novos conteúdos
+
+🎨 UI Moderna
+
+Animações com AOS
+
+Componentes reutilizáveis
+
+Layout responsivo
+
+Design clean e corporativo
+
+🧠 Arquitetura Profissional
+
+Separação clara de responsabilidades
+
+Componentização reutilizável
+
+Fácil manutenção e escalabilidade
