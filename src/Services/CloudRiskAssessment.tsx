@@ -65,9 +65,12 @@ export default function CloudRiskAssessment() {
 
       {/* CTA */}
       <div>
-        <button className="btn-glow px-6 py-3">
-          Solicitar Avaliação de Riscos
-        </button>
+        <a
+          href="/services"
+          className="inline-block mt-10 ml-[40%] bg-[#001B3A] text-white px-8 py-3 rounded-md font-semibold hover:bg-cyan-600 transition"
+        >
+          Ver todos os serviços
+        </a>
       </div>
     </section>
   );
