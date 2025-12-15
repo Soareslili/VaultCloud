@@ -1,0 +1,111 @@
+import {
+  Shield,
+  Lock,
+  Cloud,
+  Cpu,
+  Server,
+  Network,
+} from "lucide-react";
+
+export const services = [
+  {
+    slug: "cloud-strategy",
+    title: "Cloud Strategy & Roadmap",
+    desc: "Transforme sua jornada em nuvem em uma operação segura e escalável, com estratégia e governança multicloud.",
+    icon: Cloud,
+    hasPage: true,
+  },
+  {
+    slug: "cloud-risk-assessment",
+    title: "Cloud Risk Assessment & Compliance",
+    desc: "Identifique riscos e alinhe sua nuvem às normas NIST, ISO 27001 e LGPD.",
+    icon: Shield,
+    hasPage: true,
+  },
+  {
+    slug: "vaultcloud-pam",
+    title: "VaultCloud PAM",
+    desc: "Controle e proteja acessos privilegiados com soluções PAM e cofres de segredos.",
+    icon: Lock,
+    hasPage: true,
+  },
+
+  // 👇 próximos (páginas depois)
+  {
+    slug: "cloud-detection-response",
+    title: "Cloud-Native Detection & Response",
+    desc: "Monitore ameaças em tempo real com SIEM e SOAR integrados.",
+    icon: Cpu,
+    hasPage: false,
+  },
+  {
+    slug: "devsec-pipeline",
+    title: "DevSecPipeline",
+    desc: "Segurança contínua no pipeline DevOps com políticas automatizadas.",
+    icon: Server,
+    hasPage: false,
+  },
+  {
+    slug: "secure-cloud-foundation",
+    title: "Secure Cloud Foundation & Landing Zone",
+    desc: "Base segura em nuvem com identidade, rede e políticas automatizadas.",
+    icon: Network,
+    hasPage: false,
+  },
+  {
+    slug: "backup-immutable-vault",
+    title: "Backup & Immutable Vault",
+    desc: "Backup imutável e recuperação de desastres com criptografia.",
+    icon: Lock,
+    hasPage: false,
+  },
+  {
+    slug: "finops-optimization",
+    title: "Cloud Cost & Performance Optimization",
+    desc: "Reduza custos e melhore performance com práticas FinOps.",
+    icon: Cpu,
+    hasPage: false,
+  },
+  {
+    slug: "data-protection",
+    title: "Data Protection & Encryption-as-a-Service",
+    desc: "Criptografia, KMS e proteção de dados sensíveis.",
+    icon: Shield,
+    hasPage: false,
+  },
+  {
+    slug: "sensitive-data-discovery",
+    title: "Sensitive Data Discovery & Remediation",
+    desc: "Descubra e trate dados sensíveis automaticamente.",
+    icon: Cloud,
+    hasPage: false,
+  },
+  {
+    slug: "managed-cloud-security",
+    title: "Managed Cloud Security (SOC-as-a-Service)",
+    desc: "Operação de segurança 24/7 com relatórios e dashboards.",
+    icon: Server,
+    hasPage: false,
+  },
+  {
+    slug: "incident-response",
+    title: "Incident Response & Forensics",
+    desc: "Resposta rápida a incidentes e análise forense detalhada.",
+    icon: Shield,
+    hasPage: false,
+  },
+  {
+    slug: "training-workshops",
+    title: "Workshops e Treinamentos",
+    desc: "Capacitação em Cloud Security, DevSecOps e Zero Trust.",
+    icon: Network,
+    hasPage: false,
+  },
+  {
+    slug: "drp-it-ot",
+    title: "DRP IT/OT – Disaster Recovery",
+    desc: "Plano de recuperação de desastres para ambientes críticos.",
+    icon: Server,
+    hasPage: false,
+  },
+];

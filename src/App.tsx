@@ -18,6 +18,9 @@ import GovernancaCloudPost from "./Blog/GovernancaCloudPost";
 import CloudOpsPost from "./Blog/CloudOpsPost";
 import CiberataquesPost from "./Blog/CiberataquesPost";
 import DevSecOpsPost from "./Blog/DevSecOpsPost";
+import CloudStrategy from "./Services/CloudStrategy";
+import CloudRiskAssessment from "./Services/CloudRiskAssessment";
+import VaultCloudPAMService from "./Services/VaultCloudPAMService";
 
 
 
@@ -52,6 +55,10 @@ function App() {
             <Route path="/blog/cloudops" element={<CloudOpsPost />} />
             <Route path="/blog/devsecops" element={<DevSecOpsPost />} />
             <Route path="/blog/ciberataques" element={<CiberataquesPost />} />
+
+            <Route path="/services/cloud-strategy" element={<CloudStrategy />} />
+            <Route path="/services/cloud-risk-assessment" element={<CloudRiskAssessment/>} />
+            <Route path="/services/vaultcloud-pam" element={<VaultCloudPAMService />} />
       
 
 
